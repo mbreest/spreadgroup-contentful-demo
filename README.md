@@ -1,6 +1,6 @@
-# Spreadshop Website Demo using Contentful
+# Spreadgroup Website Demo using Contentful
 
-Spreadshop Website Demo using Contentul. 
+Spreadgroup Website Demo using Contentul. 
 
 ## Getting started
 
