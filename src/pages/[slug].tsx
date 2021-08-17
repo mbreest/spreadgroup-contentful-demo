@@ -38,7 +38,7 @@ export default function Landing({ page }: LandingProps) {
 }
 
 export async function getServerSideProps({ params, query, locale }) {
-  const slug = String(params && params.slug);
+  const slug = String((params && params.slug) ?? 'job-openings');
   const preview = isPreviewEnabled(query);
   const page = await getPage({
     slug,
