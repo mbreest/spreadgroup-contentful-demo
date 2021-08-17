@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 
 import { TypePage } from './types';
-import { PageContentTypes } from './constants';
 import { isPreviewEnabled, withPreviewParam } from './preview';
 
 export interface LinkProps {
@@ -14,41 +13,6 @@ function linkToPage(page: TypePage, isPreview: boolean): LinkProps {
   const pageType = page.fields.content?.sys.contentType.sys.id;
 
   switch (pageType) {
-    case PageContentTypes.HelpDeskArticle: {
-      return {
-        href: withPreviewParam('/helpdesk/[slug]', isPreview),
-        as: withPreviewParam(`/helpdesk/${slug}`, isPreview),
-      };
-    }
-
-    case PageContentTypes.LandingPage: {
-      if (slug == 'blog') {
-        return {
-          href: withPreviewParam(`/blog`, isPreview),
-          as: withPreviewParam(`/blog`, isPreview),
-        };
-      } else {
-        return {
-          href: withPreviewParam(`/[slug]`, isPreview),
-          as: withPreviewParam(`/${slug}`, isPreview),
-        };
-      }
-    }
-
-    case PageContentTypes.BlogCategory: {
-      return {
-        href: withPreviewParam(`/blog/category/[slug]`, isPreview),
-        as: withPreviewParam(`/blog/category/${slug}`, isPreview),
-      };
-    }
-
-    case PageContentTypes.BlogPost: {
-      return {
-        href: withPreviewParam(`/blog/[slug]`, isPreview),
-        as: withPreviewParam(`/blog/${slug}`, isPreview),
-      };
-    }
-
     default: {
       throw new Error('Page type is not supported yet');
     }

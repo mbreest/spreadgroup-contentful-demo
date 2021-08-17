@@ -5,8 +5,8 @@ import ErrorPage from 'next/error';
 import { getPage } from 'lib/api';
 import { isPreviewEnabled } from 'lib/preview';
 import { PageContentTypes } from 'lib/constants';
-import { TypePage, TypePagePagetypeSpreadGroupPage } from 'lib/types';
-import { BlockRenderer } from 'components/renderer/block-renderer';
+import { TypePage } from 'lib/types';
+import SpgrSingleJob from '../../components/spreadgroup/singleJob/SpgrSingleJob';
 import { PageHead } from '../../components/page-head';
 
 type LandingProps = {
@@ -18,25 +18,22 @@ export default function Landing({ page }: LandingProps) {
     return <ErrorPage statusCode={404} />;
   }
 
-  const content = page.fields.content as TypePagePagetypeSpreadGroupPage;
-  const { sections } = content.fields;
-
   return (
     <div className="w-full pb-16">
-      <PageHead page={page} />
-      <BlockRenderer block={sections} />
+      <PageHead page={page} />      
+      <SpgrSingleJob page={page} />
     </div>
   );
 }
 
 export async function getServerSideProps({ params, query, locale }) {
-  const slug = String(params && params.slug);
+  const slug = String((params && params.slug) ?? 'job-openings');
   const preview = isPreviewEnabled(query);
   const page = await getPage({
     slug,
     preview,
     locale,
-    pageContentType: PageContentTypes.SpreadGroup,
+    pageContentType: PageContentTypes.SpreadGroupSingleJobs,
   });
 
   return {

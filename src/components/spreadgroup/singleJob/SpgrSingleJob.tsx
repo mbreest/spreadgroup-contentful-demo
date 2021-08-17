@@ -24,7 +24,7 @@ const SpgrSingleJob = ({ page }) => {
               clipRule="evenodd"></path>
           </svg>
         </span>
-        <Link href={`/${locale}/spreadgroup/job-openings`}>Zeige alle Jobs</Link>
+        <Link href={`/job-openings`}>Zeige alle Jobs</Link>
       </div>
 
       <section className="sprdRow sprdRow--pbs sprdRow--pts sprdRow--gray8">

@@ -1,23 +1,8 @@
-export const SITE_NAME = 'Spreadshop';
+export const SITE_NAME = 'Spreadgroup';
 
 export const PageContentType = 'page';
 
-export const ComponentContentTypes = {
-  Hero: 'heroImage',
-  FeaturedUSP: 'featuredUsp',
-  Carousel: 'carousel',
-  SkuCarousel: 'skuCarousel',
-  Testimonial: 'testimonial',
-  Banner: 'banner',
-  SingleAsset: 'singleAsset',
-  USPList: 'uspList',
-  Calculator: 'calculator',
-  BlogRoll: 'blogRoll',
-  Faq: 'faq',
-  Tabs: 'tablist',
-  Grid: 'componentGrid',
-  SegmentedComponent: 'componentSegmentedComponent',
-  Slot: 'componentSlot',
+export const ComponentContentTypes = {  
   SpgrSection: 'spgrSection',
   SpgrTeaser: 'spgrTeaser',
   SpgrJobArchive: 'spgrJobArchive',
@@ -27,12 +12,7 @@ export const ComponentContentTypes = {
   SpgrCategoryDepartment: 'spgrDepartmentCategory',
 };
 
-export const PageContentTypes = {
-  HelpDeskArticle: 'pageHelpdeskArticle',
-  LandingPage: 'pageLandingpage',
-  BlogCategory: 'pageBlogCategory',
-  BlogPost: 'pageBlogPost',
-  Product: 'pageProduct',
+export const PageContentTypes = {  
   SpreadGroup: 'pagePagetypeSpreadGroupPage',
   SpreadGroupSingleJobs: 'pagePagetypeSpreadGroupSingleJob',
 };
