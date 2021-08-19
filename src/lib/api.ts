@@ -4,7 +4,6 @@ import { parsePage } from './pageParsers';
 import { PageContentType, PageContentTypes } from './constants';
 import { Locale } from './translations';
 
-
 export const client = createClient({
   space: process.env.CF_SPACE_ID,
   accessToken: process.env.CF_DELIVERY_ACCESS_TOKEN,
@@ -43,15 +42,14 @@ export async function getPage(params: GetPageParams) {
   return page ? parsePage(page) : null;
 }
 
-export async function getJobEntries({ categoryId }) {
+export async function getJobEntries() {
   const client = getClient(false);
 
-  const { items: pages } = await client.getEntries({
+  const { items: jobs } = await client.getEntries({
     content_type: 'page',
-    'fields.content.sys.contentType.sys.id': PageContentTypes.SpreadGroup,
-    'fields.content.fields.category.sys.id': categoryId,
+    'fields.content.sys.contentType.sys.id': PageContentTypes.SpreadGroupSingleJobs,
     order: 'sys.createdAt',
   });
 
-  return pages ? pages.map((page) => parsePage(page)) : [];
+  return jobs;
 }

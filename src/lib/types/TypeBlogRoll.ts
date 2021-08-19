@@ -1,6 +1,6 @@
 import * as Contentful from 'contentful';
 import { TypeExternalPageFields } from './TypeExternalPage';
-import { TypePage, TypePageFields } from './TypePage';
+import { TypePageFields } from './TypePage';
 import { TypePageBlogCategoryFields } from './TypePageBlogCategory';
 
 export interface TypeBlogRollFields {
@@ -12,7 +12,6 @@ export interface TypeBlogRollFields {
   ctaType?: 'Primary' | 'Ghost';
   ctaLabel?: Contentful.EntryFields.Symbol;
   ctaTarget?: Contentful.Entry<TypePageFields | TypeExternalPageFields>;
-  topPosts?: TypePage[];
 }
 
 export type TypeBlogRoll = Contentful.Entry<TypeBlogRollFields>;

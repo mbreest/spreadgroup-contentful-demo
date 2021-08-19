@@ -5,6 +5,7 @@ import { TypePageBlogPostFields } from './TypePageBlogPost';
 import { TypePageHelpdeskArticleFields } from './TypePageHelpdeskArticle';
 import { TypePageLandingpageFields } from './TypePageLandingpage';
 import { TypePagePagetypeSpreadGroupPageFields } from './TypePagePagetypeSpreadGroupPage';
+import { TypePagePagetypeSpreadGroupSingleJobFields } from './TypePagePagetypeSpreadGroupSingleJob';
 import { TypePageProductFields } from './TypePageProduct';
 import { TypeSeoFields } from './TypeSeo';
 
@@ -21,6 +22,9 @@ export interface TypePageFields {
     | TypePageLandingpageFields
     | TypePageProductFields
     | TypePagePagetypeSpreadGroupPageFields
+    | TypePagePagetypeSpreadGroupSingleJobFields
+    | TypePagePagetypeSpreadGroupSingleJobFields
+    | TypePagePagetypeSpreadGroupSingleJobFields
   >;
 }
 

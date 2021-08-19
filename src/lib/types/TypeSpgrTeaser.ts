@@ -5,6 +5,7 @@ export interface TypeSpgrTeaserFields {
   subline: Contentful.EntryFields.Symbol;
   title: Contentful.EntryFields.Symbol;
   teaser?: CFRichTextTypes.Block | CFRichTextTypes.Inline;
+  background?: 'None' | 'Color' | 'Svg' | 'Image';
 }
 
 export type TypeSpgrTeaser = Contentful.Entry<TypeSpgrTeaserFields>;
