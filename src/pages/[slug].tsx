@@ -8,7 +8,7 @@ import { PageContentTypes } from 'lib/constants';
 import { TypePage, TypePagePagetypeSpreadGroupPage } from 'lib/types';
 import { BlockRenderer } from 'components/spreadgroup/block-renderer';
 import { PageHead } from '../components/page-head';
-import Link from 'next/link'
+import Link from 'next/link';
 
 type LandingProps = {
   page: TypePage;
@@ -25,13 +25,6 @@ export default function Landing({ page }: LandingProps) {
   return (
     <div className="w-full pb-16">
       <PageHead page={page} />
-      
-      <Link href="/job-openings" locale="en">
-        <a>English</a>        
-      </Link>
-      <Link href="/job-openings" locale="de">
-        <a>German</a>        
-      </Link>
       <BlockRenderer block={sections} />
     </div>
   );

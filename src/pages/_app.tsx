@@ -6,7 +6,6 @@ import { LocaleContext } from 'lib/translations';
 
 function SpreadshopApp({ Component, pageProps }) {
   const { locale, ...otherPageProps } = pageProps;
-  console.log(locale);
 
   return (
     <LocaleContext.Provider value={locale}>
@@ -20,6 +19,11 @@ function SpreadshopApp({ Component, pageProps }) {
           />
           <link
             href="https://www.spreadgroup.com/wp-content/themes/spreadgroup_theme/style.css?cb=776024"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            href="https://www.spreadshirt.com/shopData/style/global.css?v=8.52.1_134b47cd8365a0e949e591016690cda862a84fbe"
             rel="stylesheet"
             type="text/css"
           />

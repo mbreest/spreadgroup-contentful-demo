@@ -2,7 +2,7 @@ export const SITE_NAME = 'Spreadgroup';
 
 export const PageContentType = 'page';
 
-export const ComponentContentTypes = {  
+export const ComponentContentTypes = {
   SpgrSection: 'spgrSection',
   SpgrTeaser: 'spgrTeaser',
   SpgrJobArchive: 'spgrJobArchive',
@@ -12,9 +12,10 @@ export const ComponentContentTypes = {
   SpgrCategoryDepartment: 'spgrDepartmentCategory',
 };
 
-export const PageContentTypes = {  
+export const PageContentTypes = {
   SpreadGroup: 'pagePagetypeSpreadGroupPage',
   SpreadGroupSingleJobs: 'pagePagetypeSpreadGroupSingleJob',
+  Bob: 'pagePagetypeLpBob',
 };
 
 export const fallbackImage = {

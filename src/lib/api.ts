@@ -53,3 +53,15 @@ export async function getJobEntries() {
 
   return jobs;
 }
+
+export async function getBobPages() {
+  const client = getClient(false);
+
+  const { items: pages } = await client.getEntries({
+    content_type: 'page',
+    'fields.content.sys.contentType.sys.id': PageContentTypes.Bob,
+    order: 'sys.createdAt',
+  });
+
+  return pages;
+}
