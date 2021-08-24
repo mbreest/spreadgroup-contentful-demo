@@ -53,6 +53,6 @@ export async function getStaticProps({ params, query, locale }) {
 
   return {
     props: { page },
-    revalidate: 3600,
+    revalidate: 10,
   };
 }
