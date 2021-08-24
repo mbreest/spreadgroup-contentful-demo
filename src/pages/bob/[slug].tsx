@@ -5,9 +5,10 @@ import ErrorPage from 'next/error';
 import { getBobPages, getPage } from 'lib/api';
 import { isPreviewEnabled } from 'lib/preview';
 import { PageContentTypes } from 'lib/constants';
-import { TypePage } from 'lib/types';
+import { TypePage, TypePagePagetypeLpBob, TypePagePagetypeSpreadGroupPage } from 'lib/types';
 import { PageHead } from '../../components/page-head';
 import Teaser from '../../components/bob/teaser/Teaser';
+import { BlockRenderer } from '../../components/block-renderer';
 
 type LandingProps = {
   page: TypePage;
@@ -18,6 +19,9 @@ export default function BobSinglePage({ page }: LandingProps) {
     return <ErrorPage statusCode={404} />;
   }
 
+  const content = page.fields.content as TypePagePagetypeLpBob;
+  const { usPs } = content.fields;
+
   return (
     <div className="w-full pb-16">
       <PageHead page={page} />
@@ -25,6 +29,7 @@ export default function BobSinglePage({ page }: LandingProps) {
         {/*eslint-disable-next-line*/}
         {/*@ts-ignore*/}
         <Teaser title={page.fields.content.fields.title} />
+        <BlockRenderer block={usPs} />
       </main>
     </div>
   );
@@ -53,6 +58,6 @@ export async function getStaticProps({ params, query, locale }) {
 
   return {
     props: { page },
-    revalidate: 0.5,
+    revalidate: 1,
   };
 }

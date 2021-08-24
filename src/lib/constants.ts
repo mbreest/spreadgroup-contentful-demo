@@ -10,6 +10,7 @@ export const ComponentContentTypes = {
   SpgrSingleJobGlobal: 'spgrSingleJob',
   SpgrSingleJobLocal: 'spgrSingleJobLocal',
   SpgrCategoryDepartment: 'spgrDepartmentCategory',
+  BobUSPs: 'bobUsPs',
 };
 
 export const PageContentTypes = {

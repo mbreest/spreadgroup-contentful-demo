@@ -1,5 +1,5 @@
 import React from 'react';
-import { BlockRenderer } from './block-renderer';
+import { BlockRenderer } from '../block-renderer';
 import TeaserSVGBackgrounds from './teaserBackground/TeaserSVGBackgrounds';
 import classNames from 'classnames';
 

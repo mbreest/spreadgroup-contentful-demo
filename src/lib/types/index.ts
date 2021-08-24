@@ -3,6 +3,7 @@ export type { TypeAssortmentPage, TypeAssortmentPageFields } from './TypeAssortm
 export type { TypeBanner, TypeBannerFields } from './TypeBanner';
 export type { TypeBlogPostTest, TypeBlogPostTestFields } from './TypeBlogPostTest';
 export type { TypeBlogRoll, TypeBlogRollFields } from './TypeBlogRoll';
+export type { TypeBobUsPs, TypeBobUsPsFields } from './TypeBobUsPs';
 export type { TypeCalculator, TypeCalculatorFields } from './TypeCalculator';
 export type { TypeCarousel, TypeCarouselFields } from './TypeCarousel';
 export type { TypeCarouselCategory, TypeCarouselCategoryFields } from './TypeCarouselCategory';

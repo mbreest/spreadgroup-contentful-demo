@@ -2,12 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import type { Entry } from 'contentful';
 
-import { ComponentContentTypes, PageContentType } from '../../lib/constants';
-import SpgrSection from './SpgrSection';
-import SpgrTeaser from './SpgrTeaser';
-import SpgrJobArchive from './jobArchive/SpgrJobArchive';
-import SpgrRecruitingSpecialist from './SpgrRecruitingSpecialist';
-import SpgrSingleJob from './singleJob/SpgrSingleJob';
+import { ComponentContentTypes, PageContentType } from '../lib/constants';
+import SpgrSection from './spreadgroup/SpgrSection';
+import SpgrTeaser from './spreadgroup/SpgrTeaser';
+import SpgrJobArchive from './spreadgroup/jobArchive/SpgrJobArchive';
+import SpgrRecruitingSpecialist from './spreadgroup/SpgrRecruitingSpecialist';
+import SpgrSingleJob from './spreadgroup/singleJob/SpgrSingleJob';
+import USPs from './bob/usp/USPs';
 
 type BlockRendererProps = {
   block: any;
@@ -49,12 +50,13 @@ const BlockRenderer = ({ block, segment }: BlockRendererProps) => {
 const fromPage = (fieldName: string) => (parent: Entry<unknown>) =>
   <BlockRenderer block={{ ...parent?.fields[fieldName], parent }} segment={''} />;
 
-const ContentTypeMap = { 
+const ContentTypeMap = {
   [ComponentContentTypes.SpgrSection]: SpgrSection,
   [ComponentContentTypes.SpgrTeaser]: SpgrTeaser,
   [ComponentContentTypes.SpgrJobArchive]: SpgrJobArchive,
   [ComponentContentTypes.SpgrRecruitingSpecialist]: SpgrRecruitingSpecialist,
   [ComponentContentTypes.SpgrSingleJobLocal]: SpgrSingleJob,
+  [ComponentContentTypes.BobUSPs]: USPs,
   [PageContentType]: fromPage('content'),
 };
 

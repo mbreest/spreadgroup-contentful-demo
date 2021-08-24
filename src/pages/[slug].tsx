@@ -6,7 +6,7 @@ import { getPage } from 'lib/api';
 import { isPreviewEnabled } from 'lib/preview';
 import { PageContentTypes } from 'lib/constants';
 import { TypePage, TypePagePagetypeSpreadGroupPage } from 'lib/types';
-import { BlockRenderer } from 'components/spreadgroup/block-renderer';
+import { BlockRenderer } from 'components/block-renderer';
 import { PageHead } from '../components/page-head';
 import Link from 'next/link';
 
