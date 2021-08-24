@@ -2,10 +2,10 @@
 import React from 'react';
 import ErrorPage from 'next/error';
 
-import { getBobPages, getJobEntries, getPage } from 'lib/api';
+import { getBobPages, getPage } from 'lib/api';
 import { isPreviewEnabled } from 'lib/preview';
 import { PageContentTypes } from 'lib/constants';
-import { TypePage, TypePageFields, TypePagePagetypeSpreadGroupSingleJob } from 'lib/types';
+import { TypePage } from 'lib/types';
 import { PageHead } from '../../components/page-head';
 import Teaser from '../../components/bob/teaser/Teaser';
 
@@ -18,11 +18,15 @@ export default function BobSinglePage({ page }: LandingProps) {
     return <ErrorPage statusCode={404} />;
   }
 
+  console.log(page);
+
   return (
     <div className="w-full pb-16">
       <PageHead page={page} />
       <main className="bob sprd-responsive-cnt">
-        <Teaser title={page.fields.title} />
+        {/*eslint-disable-next-line*/}
+        {/*@ts-ignore*/}
+        <Teaser title={page.fields.content.fields.title} />
       </main>
     </div>
   );

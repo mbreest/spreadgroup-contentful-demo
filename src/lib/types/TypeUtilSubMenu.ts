@@ -5,6 +5,7 @@ import { TypePageFields } from './TypePage';
 export interface TypeUtilSubMenuFields {
   title?: Contentful.EntryFields.Symbol;
   description?: Contentful.EntryFields.Symbol;
+  image?: Contentful.Asset;
   new?: Contentful.EntryFields.Boolean;
   highlight?: Contentful.EntryFields.Boolean;
   icon?: 'gift' | 'tag';

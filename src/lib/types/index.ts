@@ -27,6 +27,7 @@ export type {
   TypePageHelpdeskArticleFields,
 } from './TypePageHelpdeskArticle';
 export type { TypePageLandingpage, TypePageLandingpageFields } from './TypePageLandingpage';
+export type { TypePagePagetypeLpBob, TypePagePagetypeLpBobFields } from './TypePagePagetypeLpBob';
 export type {
   TypePagePagetypeSpreadGroupPage,
   TypePagePagetypeSpreadGroupPageFields,
