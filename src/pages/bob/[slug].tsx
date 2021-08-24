@@ -18,8 +18,6 @@ export default function BobSinglePage({ page }: LandingProps) {
     return <ErrorPage statusCode={404} />;
   }
 
-  console.log(page);
-
   return (
     <div className="w-full pb-16">
       <PageHead page={page} />

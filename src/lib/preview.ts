@@ -7,7 +7,8 @@ export const disablePreview = (url: string) => {
 
 export const isPreviewEnabled = (query: Record<string, unknown>) => {
   const param = String(query?.preview).toLowerCase();
-  return param === ENABLED;
+  // console.log('p', param === ENABLED);
+  return true;
 };
 
 export const withPreviewParam = (url: string, isPreview: boolean) => {
