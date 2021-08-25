@@ -11,12 +11,15 @@ export const ComponentContentTypes = {
   SpgrSingleJobLocal: 'spgrSingleJobLocal',
   SpgrCategoryDepartment: 'spgrDepartmentCategory',
   BobUSPs: 'bobUsPs',
+  ZendeskSection: 'zendeskSection',
+  ZendeskVolumeDiscountCalculator: 'zendeskVolumeDiscountCalculator',
 };
 
 export const PageContentTypes = {
   SpreadGroup: 'pagePagetypeSpreadGroupPage',
   SpreadGroupSingleJobs: 'pagePagetypeSpreadGroupSingleJob',
   Bob: 'pagePagetypeLpBob',
+  Zendesk: 'pagePagetypeZendesk',
 };
 
 export const fallbackImage = {

@@ -37,6 +37,10 @@ export type {
   TypePagePagetypeSpreadGroupSingleJob,
   TypePagePagetypeSpreadGroupSingleJobFields,
 } from './TypePagePagetypeSpreadGroupSingleJob';
+export type {
+  TypePagePagetypeZendesk,
+  TypePagePagetypeZendeskFields,
+} from './TypePagePagetypeZendesk';
 export type { TypePageProduct, TypePageProductFields } from './TypePageProduct';
 export type { TypeQuote, TypeQuoteFields } from './TypeQuote';
 export type { TypeSeo, TypeSeoFields } from './TypeSeo';

@@ -9,6 +9,8 @@ import SpgrJobArchive from './spreadgroup/jobArchive/SpgrJobArchive';
 import SpgrRecruitingSpecialist from './spreadgroup/SpgrRecruitingSpecialist';
 import SpgrSingleJob from './spreadgroup/singleJob/SpgrSingleJob';
 import USPs from './bob/usp/USPs';
+import VolumeDiscountCalculator from './zendesk/volumeDiscountCalculator/VolumeDiscountCalculator';
+import ZendeskSection from './zendesk/ZendeskSection';
 
 type BlockRendererProps = {
   block: any;
@@ -57,6 +59,8 @@ const ContentTypeMap = {
   [ComponentContentTypes.SpgrRecruitingSpecialist]: SpgrRecruitingSpecialist,
   [ComponentContentTypes.SpgrSingleJobLocal]: SpgrSingleJob,
   [ComponentContentTypes.BobUSPs]: USPs,
+  [ComponentContentTypes.ZendeskSection]: ZendeskSection,
+  [ComponentContentTypes.ZendeskVolumeDiscountCalculator]: VolumeDiscountCalculator,
   [PageContentType]: fromPage('content'),
 };
 

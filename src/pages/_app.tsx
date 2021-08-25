@@ -27,6 +27,7 @@ function SpreadshopApp({ Component, pageProps }) {
             rel="stylesheet"
             type="text/css"
           />
+          <script src="https://www.spreadshirt.com/resources/flex/volumeDiscountCalculator/script.js" />
         </Head>
         <PreviewBanner />
         <div className="w-full flex flex-col relative">

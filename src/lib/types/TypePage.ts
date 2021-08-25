@@ -7,6 +7,7 @@ import { TypePageLandingpageFields } from './TypePageLandingpage';
 import { TypePagePagetypeLpBobFields } from './TypePagePagetypeLpBob';
 import { TypePagePagetypeSpreadGroupPageFields } from './TypePagePagetypeSpreadGroupPage';
 import { TypePagePagetypeSpreadGroupSingleJobFields } from './TypePagePagetypeSpreadGroupSingleJob';
+import { TypePagePagetypeZendeskFields } from './TypePagePagetypeZendesk';
 import { TypePageProductFields } from './TypePageProduct';
 import { TypeSeoFields } from './TypeSeo';
 
@@ -27,6 +28,7 @@ export interface TypePageFields {
     | TypePagePagetypeSpreadGroupSingleJobFields
     | TypePagePagetypeSpreadGroupSingleJobFields
     | TypePagePagetypeLpBobFields
+    | TypePagePagetypeZendeskFields
   >;
 }
 

@@ -65,3 +65,15 @@ export async function getBobPages() {
 
   return pages;
 }
+
+export async function getZendeskPages() {
+  const client = getClient(false);
+
+  const { items: pages } = await client.getEntries({
+    content_type: 'page',
+    'fields.content.sys.contentType.sys.id': PageContentTypes.Zendesk,
+    order: 'sys.createdAt',
+  });
+
+  return pages;
+}
