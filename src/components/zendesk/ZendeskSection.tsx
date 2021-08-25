@@ -1,3 +1,4 @@
+import React from 'react';
 import { BlockRenderer } from '../block-renderer';
 
 const ZendeskSection = ({ fields }) => {
